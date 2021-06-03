@@ -11,10 +11,6 @@ public class Vehicle {
         remainingFuel = maxFuel;
     }
 
-    public void reFuel(){
-        remainingFuel = maxFuel;
-    }
-
     public int getMaxFuel() {
         return maxFuel;
     }
@@ -26,8 +22,17 @@ public class Vehicle {
     public void setRemainingFuel(final int remainingFuel) {
         this.remainingFuel = remainingFuel;
     }
+}
+
+public class Journey {
+
+	Vehicle myVehicle = new Vehicle(100);
+
+    public void reFuel(){
+    	myVehicle.setRemainingFuel(myVehicle.getMaxFuel());
+    }
 
     public void accelerate() {
-        remainingFuel--;
+    	myVehicle.setRemainingFuel(myVehicle.getRemainingFuel()-1);
     }
 }
