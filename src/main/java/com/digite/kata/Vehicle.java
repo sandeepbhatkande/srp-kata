@@ -1,13 +1,13 @@
 //package com.github.bsferreira.solid.srp.violation;
 package com.digite.kata;
 
-public class Vehicle extends Fuel{
+public class Vehicle{
 
     private final int maxFuel;
     private int remainingFuel;
 
     public Vehicle(int maxFuel) {
-        super(maxFuel);
+        //super(maxFuel);
         this.maxFuel = maxFuel;
         this.remainingFuel = maxFuel;
     }
