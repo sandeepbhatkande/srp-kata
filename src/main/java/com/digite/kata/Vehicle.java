@@ -1,17 +1,13 @@
-package com.github.bsferreira.solid.srp.violation;
-package com.digite.kata
+package com.digite.kata;
 
 public class Vehicle {
 
     private final int maxFuel;
     private int remainingFuel;
-
-    public Vehicle(final int maxFuel) {
+    
+   
+    public Vehicle(int maxFuel) {
         this.maxFuel = maxFuel;
-        remainingFuel = maxFuel;
-    }
-
-    public void reFuel(){
         remainingFuel = maxFuel;
     }
 
@@ -26,8 +22,27 @@ public class Vehicle {
     public void setRemainingFuel(final int remainingFuel) {
         this.remainingFuel = remainingFuel;
     }
-
+    
     public void accelerate() {
-        remainingFuel--;
+		remainingFuel--;
     }
+    
+    public static void main(String args[])
+    {
+    	Vehicle v = new Vehicle(20);
+    	
+    	while (v.remainingFuel > 0) {
+    		v.accelerate();
+    		//System.out.println(v.remainingFuel);
+    	}
+    		
+    	if (v.remainingFuel == 0) 
+    	{
+	    	PetrolPump pp = new PetrolPump();
+	    	pp.reFuel(v);
+    	}
+    	System.out.print(v.remainingFuel);
+    	
+    }
+
 }
