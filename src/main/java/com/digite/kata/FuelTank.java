@@ -9,6 +9,7 @@ public class FuelTank {
         this.maxFuel = maxFuel;
         remainingFuel = maxFuel;
     }
+    
 
     public int getMaxFuel() {
         return maxFuel;
@@ -21,5 +22,6 @@ public class FuelTank {
     public void setRemainingFuel(final int remainingFuel) {
         this.remainingFuel = remainingFuel;
     }
+    //
 
 }
