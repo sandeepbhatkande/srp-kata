@@ -10,10 +10,6 @@ public class FuelTank {
         remainingFuel = maxFuel;
     }
 
-    public void reFuel(){
-        remainingFuel = maxFuel;
-    }
-
     public int getMaxFuel() {
         return maxFuel;
     }
