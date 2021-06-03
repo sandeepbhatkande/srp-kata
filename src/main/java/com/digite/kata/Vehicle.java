@@ -1,5 +1,4 @@
-package com.github.bsferreira.solid.srp.violation;
-package com.digite.kata
+package com.digite.kata;
 
 public class Vehicle {
 
@@ -8,10 +7,6 @@ public class Vehicle {
 
     public Vehicle(final int maxFuel) {
         this.maxFuel = maxFuel;
-        remainingFuel = maxFuel;
-    }
-
-    public void reFuel(){
         remainingFuel = maxFuel;
     }
 
@@ -26,8 +21,9 @@ public class Vehicle {
     public void setRemainingFuel(final int remainingFuel) {
         this.remainingFuel = remainingFuel;
     }
-
+    
     public void accelerate() {
         remainingFuel--;
     }
+ 
 }
