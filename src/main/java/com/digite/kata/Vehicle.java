@@ -1,33 +1,20 @@
-package com.github.bsferreira.solid.srp.violation;
-package com.digite.kata
+package com.digite.kata;
 
 public class Vehicle {
-
-    private final int maxFuel;
-    private int remainingFuel;
+	
+	public FuelTank fueltank;
+	public Refill refill;
 
     public Vehicle(final int maxFuel) {
-        this.maxFuel = maxFuel;
-        remainingFuel = maxFuel;
-    }
-
-    public void reFuel(){
-        remainingFuel = maxFuel;
-    }
-
-    public int getMaxFuel() {
-        return maxFuel;
-    }
-
-    public int getRemainingFuel() {
-        return remainingFuel;
-    }
-
-    public void setRemainingFuel(final int remainingFuel) {
-        this.remainingFuel = remainingFuel;
+    	this.fueltank = new FuelTank(maxFuel);
+    	this.refill = new Refill(maxFuel, this.fueltank.getRemainingFuel());
     }
 
     public void accelerate() {
-        remainingFuel--;
+    	fueltank.setRemainingFuel(fueltank.getRemainingFuel() - 1);
+    }
+    
+    public void refuelVehicle() {
+    	refill.reFuel();
     }
 }
